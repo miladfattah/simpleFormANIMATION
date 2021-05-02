@@ -6,5 +6,65 @@
 
 body {
     font-family: 'Hachi Maru Pop', cursive;
-   
+    min-height: 100vh;
+    width: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: rgba(9, 170, 114, 0.904);
+}
+
+
+.field {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    width: 400px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .5s ease ;
+}
+
+.field i {
+
+    margin: 0 15px;
+}
+
+
+.field input {
+    background: none;
+    border: none;
+    outline: none;
+    height: 100%;
+    flex: 1;
+}
+
+
+
+
+
+div.innactive{
+    opacity: 0;
+    transform: translate(-50%, 50%);
+    pointer-events: none;
+}
+
+
+div.active{
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    pointer-events: all;
+}
+
+.field:not(.field.thank-you) i:nth-of-type(2){
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.field:not(.field.thank-you) i:nth-of-type(2):hover{
+    color: rgba(3, 107, 204, 0.801);
 }
