@@ -13,6 +13,7 @@ body {
     align-items: center;
     position: relative;
     background-color: rgba(9, 170, 114, 0.904);
+    transition: all .5s ease;
 }
 
 
@@ -31,7 +32,6 @@ body {
 }
 
 .field i {
-
     margin: 0 15px;
 }
 
@@ -67,4 +67,15 @@ div.active{
 }
 .field:not(.field.thank-you) i:nth-of-type(2):hover{
     color: rgba(3, 107, 204, 0.801);
+}
+
+
+@keyframes animated {
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }50%{
+        transform: translate(-50%,-50%) rotate(10deg);
+    }100%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
 }
